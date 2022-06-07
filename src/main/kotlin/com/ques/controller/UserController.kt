@@ -51,7 +51,7 @@ class UserController(
         name: String
     ): Res = if (password.hasNotBlank()
         and name.hasNotBlank())
-        profileServ.updateUserName(password, name)
+        profileServ.updateUserEmail(password, name)
     else Res(Info.ILLEGAL_PARAM)
 
     @PostMapping("/update/user/pwd")
@@ -60,7 +60,7 @@ class UserController(
         new_password: String
     ): Res = if (old_password.hasNotBlank()
         and new_password.hasNotBlank())
-        profileServ.updateUserName(old_password, new_password)
+        profileServ.updateUserPwd(old_password, new_password)
     else Res(Info.ILLEGAL_PARAM)
 
 }
