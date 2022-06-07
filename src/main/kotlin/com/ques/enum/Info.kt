@@ -9,8 +9,9 @@ enum class Info(
 ) {
     SUCCESS(200, "Success"),
     FAIL(201, "Fail"),
+    NOT_NULL(203, "Null param"),
+    ILLEGAL_PARAM(204, "Blank param"),
 
-    USER_NAME_DUPLICATE(300, "This user name has already been used"),
-    USER_EMAIL_DUPLICATE(301, "This email has already been used"),
+    USER_EMAIL_DUPLICATE(301, "Email already used"),
     PASSWORD_WRONG(302, "Password wrong")
 }
