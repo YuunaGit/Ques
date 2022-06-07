@@ -5,13 +5,13 @@ import org.springframework.web.bind.annotation.ExceptionHandler
 import org.springframework.web.bind.annotation.RestControllerAdvice
 
 @RestControllerAdvice
-class CustomExceptionHandler {
+class GlobalExceptionHandler {
 
     @ExceptionHandler
     fun handleIllegalStateException(
         ex: NullPointerException
     ): Res {
-        return Res(Info.FAIL, "you cant null")
+        return Res(Info.NOT_NULL, "${ex.message}")
     }
 
 }
