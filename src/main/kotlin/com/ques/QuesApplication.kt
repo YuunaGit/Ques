@@ -9,3 +9,5 @@ class QuesApplication
 fun main(args: Array<String>) {
     runApplication<QuesApplication>(*args)
 }
+
+fun String.hasNotBlank(): Boolean = this.isNotBlank() and !this.contains(' ')
